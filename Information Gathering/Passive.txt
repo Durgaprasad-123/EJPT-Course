@@ -26,5 +26,8 @@ whatweb is cli based tells abiut what technology they are using
 httrack used to download a website to read the source code to find vulnerabilities.
 
 
+*Whois* to get the information of domain
+Zonetranfer.me
 
+Website Footprinting with netcraft:
 
