@@ -80,12 +80,3 @@ Use `-sn` to perform **discovery without port scanning**.
 
 ## 📌 Pro tip:
 Use `-vv` or `-d` for **verbose** or **debugging** output if you want to dig deeper.
-
----
-
-## 💬 Feedback & Collaboration
-Pull requests are welcome. This repo is meant to grow with the community. Feel free to fork and adapt!
-
-> Created by [Patryk Kieszek](https://github.com/pkieszek) · Inspired by TryHackMe 🚀
-
----
