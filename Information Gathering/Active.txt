@@ -1,0 +1,9 @@
+Tools for information Gathering & Methodology
+Active Reconnissance
+Host Discovery
+Port Scanning
+Basic Service Identification 
+DNS Zone Transfer Testing
+
+After this Orgainze findings
+Proceed to Enumeration and Exploitation

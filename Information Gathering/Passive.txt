@@ -1,0 +1,30 @@
+Tools for information Gathering & Methodology
+Passive:
+Domains and subdomains
+IP addresses
+Hosting infrastructure
+Technologies and services
+openportsS
+Publically exposed info
+
+what are we looking for
+Ip addesses 
+Directories hidden from search engines
+Names
+Email addresses
+Phone Numbers
+Physical Addresses
+Web technologies used
+
+Steps:
+host <domain name> performs dns lookup 
+check robots.txt we can see what are allowed and what are not allowed.
+sitemap.xml
+builtwith <tells which technology its using>
+wappalyzer also tells the same what technology they are using
+whatweb is cli based tells abiut what technology they are using
+httrack used to download a website to read the source code to find vulnerabilities.
+
+
+
+
