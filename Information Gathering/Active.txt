@@ -7,3 +7,14 @@ DNS Zone Transfer Testing
 
 After this Orgainze findings
 Proceed to Enumeration and Exploitation
+
+dns enumaration using dnsenum:
+you will get the dns records & also it bruteforce for subdomains 
+dnsenum <domain name>
+fierce is light weight scanner like nikto and nmap dot not perform exploitation.
+
+n-map:
+Host discovery with nmap:
+
+
+
