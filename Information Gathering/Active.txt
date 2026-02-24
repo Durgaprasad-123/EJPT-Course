@@ -15,6 +15,7 @@ fierce is light weight scanner like nikto and nmap dot not perform exploitation.
 
 n-map:
 Host discovery with nmap:
+You can read the nmap results in the nmap.md
 
 
 
