@@ -37,6 +37,8 @@ wafwoof <target>
 The harvester
 theHarvester is a tool which helps to gather emails and phonenumber using publically available resources
 theHarvester -d INC -b bind,yahooo,...
+Password leaked database:
+haveibeenpwned:
 
 
 
