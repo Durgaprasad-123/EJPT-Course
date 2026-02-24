@@ -1,0 +1,39 @@
+Network Layer is Layer 3 in osi model for logical addressing,routing and forwarding data packets between devices across differnet networks.
+Several protocal are handled in the layer3
+In Layer 3 IP have 2 versions:
+IPv4: 32-bit addresses and providing foundation for communication on the internet seperated by .
+IPv6: 128-bit addresses and offers and exponentially larger address space hexadecimal notation seperated by collumn :
+ICMP:used for error reporting and diagnostics,messages ping(echo requests and echo reply),traceroute and various error messages
+
+IP Functionality:
+Logical Address:
+These addresses are uniquely identify each device over the network.These are assigned to network interfaces.
+These are Hierarchical and structured based on network classes,subnets, and CIDR (Classless Inter-Domain Routing) notation.
+
+Packet Structure:
+Ip organizes data into packets for transmission acreoss networks.Each Packet consists of a header and payload.
+The header contains essential info including the source and dest ip addr,version number,ttl and protocol type.
+
+Fragmentation and Reassembly:
+ip allows fragmentation of large packets into smaller fragments when traversing networks with varying MTU sizes.
+The reciever reassembles these fragments to reconstruct the orginal packet.
+
+Ip Address types:
+3 types: 
+unicast (one-to-one)
+broadcast (one to-all within a subnet)
+multicast (one-to-many)
+
+subnetting:
+it is a technique that devides a larger ip network into smaller or more manageable sub-networks.
+
+ICMP:
+it is used for error reporting and diagnostics. also include echo request and echo reply
+
+DHCP:
+assign ip dynamically using DORA Process and simplify the process of network configuration.
+
+Ip header contains:
+"Source address" + "Destination address" + "TTL" + "Type 0f service (TOS)" + "protocol"
+
+TOS: contains 8 bit binary value that is used to determine the priority of each packet
