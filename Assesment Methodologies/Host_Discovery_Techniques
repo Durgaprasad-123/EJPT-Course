@@ -11,3 +11,15 @@ syn-ack ping:send this paackets to a check host is alive
 
 fping -a -g <network id> 2>/dev/null tell us which ips are live
 
+nmap scan -Pn -sA -p <ports> <ip>
+to check wheter the system have firewall or not! if its filtered then its a firewall if not then there is no firewall.
+for firewall Evasion and spoofing:
+nmap -Pn -sS -sV -F <ip> to see  service version scanning
+nmap -Pn -sS -sV -F -f <ip> //now the packets gett fragmented 
+nmap -Pn -sS -sV -F -f -mtu <ip> //mtu is Maximum Transmitted unit
+
+
+spoofing:
+nmap -Pn -sS -sV -F -f -D <gatway-id> internal ip of the host
+
+
