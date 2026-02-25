@@ -1,0 +1,7 @@
+go with the version vulnerabilities.
+go for the config files of the server is there any way to access them?
+check the source code of the web server for more links.
+and save the Nmap scan of each target in notes.
+there is a tool called wp-scan check it if you find WordPress.
+nano /etc/hosts: I got a site where I was unable to access this with a URL at this moment you need to add that machine pair IP with the Target URL in the /etc/hosts file after that you can easily access that site it takes time longer than usual.
+even MySQL ID and Passwords play a good role try to read the databases and find the other user’s password hashes
