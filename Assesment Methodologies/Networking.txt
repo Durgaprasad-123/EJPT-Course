@@ -37,3 +37,5 @@ Ip header contains:
 "Source address" + "Destination address" + "TTL" + "Type 0f service (TOS)" + "protocol"
 
 TOS: contains 8 bit binary value that is used to determine the priority of each packet
+
+
