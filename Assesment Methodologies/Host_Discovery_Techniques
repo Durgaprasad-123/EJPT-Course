@@ -1,0 +1,13 @@
+Host Discovery: it is crucial phase to identify the live hosts on a network berfore exploitation.
+Ping Sweeps:sending ICMP Echo requests to range of ip addresses to identify live hosts.
+ARP Scanning: Using Address Resolution Protocol requests to identify hosts on a local newtwork. to find hosts in a same broadcast domain.
+TCP SYN ping (half-open Scan): SEnding TCP SYN packets to a specify port to check if a host is alive.if it alive it responds with a TCP SYN-ACK.It stealthier than ICMP ping
+UDP: Ping sending UDP packets for  those do not respond to icmp or TCP probes
+TCP ACK Ping: send this request to a specific port.if port sends rest then host is live
+syn-ack ping:send this paackets to a check host is alive
+
+
+##important: if we use icmp echo on windows it wont reply.
+
+fping -a -g <network id> 2>/dev/null tell us which ips are live
+
