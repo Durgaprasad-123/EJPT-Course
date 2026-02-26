@@ -38,4 +38,13 @@ Ip header contains:
 
 TOS: contains 8 bit binary value that is used to determine the priority of each packet
 
+#IP header Analysis:
+Install wireshark and analyze the network 
+and you can see and analyzes the network
 
+Transport Layer:
+The transport layer is fourth layer in osi model,it ensure end -to -end communication handling tasks such as error detection flow control and segmentation of data into smaller units.
+TCP 
+UDP
+0-1023 are reserverd and well-known ports 
+1024-49151 are registered for spercific services or applications
