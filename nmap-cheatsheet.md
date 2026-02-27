@@ -1,5 +1,6 @@
 # 🧠 Nmap Cheatsheet
 ---
+## nmap -p<Port number> --script vuln <ip>
 
 ## 🧭 Host Discovery (Ping Scans)
 Use `-sn` to perform **discovery without port scanning**.
