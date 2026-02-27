@@ -1,0 +1,5 @@
+Ftp stands for file transfer protocol
+21 port number
+ftp transfer files to and from the directory of a webserver.
+
+msf6> search type:auxiliary name:ftp
