@@ -1,0 +1,8 @@
+##Saving the nmap file in format and start the service postgresql to share
+#nmap -Pn -sV -oX nmap.xml <target>
+service postgresql start
+msfconsole
+db_status
+db_import
+hosts // to see the hosts
+services //to see the services
