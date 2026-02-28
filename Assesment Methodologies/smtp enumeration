@@ -1,0 +1,19 @@
+smtp (simple mail transfer protocol) tcp port no:25
+nmap -sV -O <ip>
+to get the banner of smtp
+nc <ip/domain> 25
+vrfy admin@<servername> to verify admin is there or not after you get a netcat
+use auxiliary/scanner/smtp/smtp_enum
+
+telnet demo.ine.local 25
+HELO attacker.xyz
+mail from: admin@attacker.xyz
+rcpt to:root@openmailbox.xyz
+data
+Subject: Hi Root
+Hello,
+This is a fake mail sent using telnet command.
+From,
+Admin
+.
+Note: There is a dot(.) in the last line which indicates the termination of data.
