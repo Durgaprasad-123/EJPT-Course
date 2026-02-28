@@ -5,4 +5,4 @@
 - there is a tool called wp-scan check it if you find WordPress.
 - nano /etc/hosts: I got a site where I was unable to access this with a URL at this moment you need to add that machine pair IP with the Target URL in the /etc/hosts file after that you can easily access that site it takes time longer than usual.
 - even MySQL ID and Passwords play a good role try to read the databases and find the other user’s password hashes
-- #must and should use this nmap -sV -p- <target ip/domain>
+- # must and should use this nmap -sV -p- <target ip/domain>
