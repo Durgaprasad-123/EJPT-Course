@@ -54,6 +54,8 @@ password:
 
 we get the net bios name samba-recon
 smbclient -L \\\\target_ip\\sharename -U <username>
+sometimes dont use -L
+smbclient \\\\ip\\sharename -U <username>
 ls
 get flag
 you will get flag
