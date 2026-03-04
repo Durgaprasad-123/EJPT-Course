@@ -1,0 +1,10 @@
+Alternate Data streams is an NTFS file attribute and was designed to provide compatibility with the MAcOS HFS
+
+2 different forks/streams
+1.Data stream - it contains the data of the file
+2.Resource Stream - it contains metadata of the file
+
+Attackers can use ADs to hide the malicious code.
+This can be done by storing the malicious code or exe 
+
+Alternate Data Streams is not an NTFS and ext4 filesystem attribute.
