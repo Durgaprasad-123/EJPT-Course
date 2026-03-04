@@ -1,0 +1,16 @@
+Web application vulnerability scanner that can be used to automate webserver enumeration and scan web applications for vulnerabilities
+
+WMAP is available as an MSF plugin and can be loaded directly into MSF.
+
+To load in wmap
+service postgresql start
+msfconsole
+load wmap
+wmap_
+wmap_modules  wmap_nodes    wmap_run      wmap_sites    wmap_targets  wmap_vulns
+wmap have these modules 
+we use wmap_sites in this event we can add and delete sites
+wmap_sites -a <target_ip> now the site is created 
+now we use wmap_targets  -t http://<target>
+wmap_run -t it will run all available modules from msf console
+wmap_run -e runs all the enabled modules and file and dir brutefoce
