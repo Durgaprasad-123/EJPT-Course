@@ -1,0 +1,11 @@
+The webdav, smb with  PsExec are in Assesment methodologies in Webserver enumeration and smb enumeration
+From smb we can exploit eternal blue vuln also
+
+RDP uses port no:3389 
+it uses a legitimate user authentication to log in you need username and password
+bruteforce on rdp
+
+Dictionaries to use:
+
+/usr/share/metasploit-framework/data/wordlists/common_users.txt
+/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
