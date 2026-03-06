@@ -1,0 +1,6 @@
+Linux is developed as server Operating system,there are specific services and protocols that will typically be found running on a linux server.
+These servers provide an attacker with an access vector that they can utilize to gain access to a target host
+Apache server
+ssh (secure shell)
+FTP
+SAMBA
