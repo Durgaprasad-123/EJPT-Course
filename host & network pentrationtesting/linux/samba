@@ -7,3 +7,12 @@ we can perform a bruteforce attack on the samba server to get the creds
 after that we can use a utility called SMBmap to enumerate the share drives list of contents
 using smb_login in metasploit we can do otherwise using hydra we can do login
 smbmap -H <domain/ip> -u <username> -p <password> to get the shares that are read/write only
+
+to enter into shares use smbclient
+smbclient -L \\\\<ip/domian>\\ -u <username> //to see the shares
+smbclient \\\\<ip/domain>\\share$ -u <username> //to access the shares
+smbclient \\\\<ip/domain>\\share -u <username> \\to access shares only
+
+enum4linux is used to enumerate all the info
+enum4linux -a <ip/domain>
+enum4linux -a -u <username> -p <password> <domain/ip> //if smb doesnt have null login
