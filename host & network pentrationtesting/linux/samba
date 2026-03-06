@@ -16,3 +16,7 @@ smbclient \\\\<ip/domain>\\share -u <username> \\to access shares only
 enum4linux is used to enumerate all the info
 enum4linux -a <ip/domain>
 enum4linux -a -u <username> -p <password> <domain/ip> //if smb doesnt have null login
+
+using  pipe_auditor in msf console for samba
+to get the pipes Pipes: \netlogon, \lsarpc, \samr, \eventlog, \InitShutdown, \ntsvcs, \srvsvc, \wkssvc
+
