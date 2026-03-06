@@ -1,0 +1,9 @@
+Samba is a server Message block used for network file sharing protocol
+SMB ran on top of Netbios using port 139
+smb uses port 445
+Samba is Linux implementation of SMB and allows windows systems to access linux shares and devices
+
+we can perform a bruteforce attack on the samba server to get the creds
+after that we can use a utility called SMBmap to enumerate the share drives list of contents
+using smb_login in metasploit we can do otherwise using hydra we can do login
+smbmap -H <domain/ip> -u <username> -p <password> to get the shares that are read/write only
