@@ -1,0 +1,8 @@
+during nmap see the badblue 2.7
+exploited the badblue 2.7 and get sessions make it backgroumd
+search for enable_rdp coz rdp port not open 
+then rdp port get open link session and background
+next change the password of the Administrator in the meterpreter shell using net user username password
+boom got access.
+xfreerdp /u:administrator /p:newpassword /v:host/ip
+
