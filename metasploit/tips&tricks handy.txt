@@ -6,7 +6,7 @@ search name
 use 
 set the RHOSTS and remaining get the target 
 sometimes we need privileges
-getpriv
+getprivs
 SeImpersonatePrivilege.
 Used privilege escalation via:
 "getsystem"
