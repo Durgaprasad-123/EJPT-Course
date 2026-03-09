@@ -14,3 +14,7 @@ we can esclate privileges
 to convert from shell to meterpreter if we have a direct shell access ctrl + z
 then search for shell_to_meterpreter
 set lhost session boom
+rsync rsync://<target ip>>
+rsync -av rsync://<ip>/dir . //to copy file to here
+
+tip:observe the webpages it helps for the which one should i use like that
