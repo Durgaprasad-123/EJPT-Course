@@ -1,0 +1,6 @@
+pivoting is a post exploitation tech that involves utilizing a compromised host to attack other systems on the compromised hosts private interenal network
+
+after gaining acess to one host we compromised host to exploit the other hosts on the same internal network 
+
+meterpreter provide us with ability to add a network route to the internal network subnet and consequently scan and exploit other systems on the network
+
