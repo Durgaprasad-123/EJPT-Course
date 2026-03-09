@@ -1,0 +1,6 @@
+the windows os stores and catalofs all actions/eventss stored in the windows event log
+-->Application logs: stores applocations/program event like startups crashes etc
+--> system logs: stores like restart reboot etc
+--> security logs: stores security events like password changes auth failures etc
+event logs can view by event viewer
+clearev will create all the logs
