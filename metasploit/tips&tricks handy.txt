@@ -11,3 +11,6 @@ SeImpersonatePrivilege.
 Used privilege escalation via:
 "getsystem"
 we can esclate privileges
+to convert from shell to meterpreter if we have a direct shell access ctrl + z
+then search for shell_to_meterpreter
+set lhost session boom
