@@ -1,0 +1,13 @@
+service postgresql start
+workspace -a <name>
+msfconsole -q
+based on the ports we can use the modules and 
+search name
+use 
+set the RHOSTS and remaining get the target 
+sometimes we need privileges
+getpriv
+SeImpersonatePrivilege.
+Used privilege escalation via:
+"getsystem"
+we can esclate privileges
