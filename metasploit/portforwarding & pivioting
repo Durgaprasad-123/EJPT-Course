@@ -1,0 +1,13 @@
+We can do pivoting by  concept of pivoting, a crucial technique in penetration testing that allows an attacker to move from one compromised system to another within the same network. By exploiting vulnerabilities on the initial target, you will gain access and then pivot to exploit and access a secondary target.
+
+after compromising the first device ifconfig 
+get the ip and subnet
+run autoroute -s <ip.1/subnet>
+to remove route
+exit from meterpreter
+route remove <ip> subnet session number
+in meterpreter:
+portfwd add -l 1234 -p 80 -r <ip of target machine>
+boom we can get access by local machine
+now nmap -sV -p1234 localhost //we are scanning port 80
+
