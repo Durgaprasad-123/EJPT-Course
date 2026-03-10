@@ -3,4 +3,4 @@ the windows os stores and catalofs all actions/eventss stored in the windows eve
 --> system logs: stores like restart reboot etc
 --> security logs: stores security events like password changes auth failures etc
 event logs can view by event viewer
-clearev will create all the logs
+by the command "clearev" will create all the logs
