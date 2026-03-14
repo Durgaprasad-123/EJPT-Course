@@ -1,0 +1,468 @@
+nmap -p- -A -oN nmap_result.txt 192.168.100.0/24
+
+ Nmap 7.92 scan initiated Sat Mar 14 10:47:20 2026 as: nmap -p- -A -oN nmap_result.txt 192.168.100.0/24
+Nmap scan report for ip-192-168-100-1.us-west-1.compute.internal (192.168.100.1)
+Host is up (0.00020s latency).
+All 65535 scanned ports on ip-192-168-100-1.us-west-1.compute.internal (192.168.100.1) are in ignored states.
+Not shown: 65535 filtered tcp ports (no-response)
+MAC Address: 02:0E:68:1A:5C:1D (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.20 ms ip-192-168-100-1.us-west-1.compute.internal (192.168.100.1)
+
+Nmap scan report for ip-192-168-100-50.us-west-1.compute.internal (192.168.100.50)
+Host is up (0.00067s latency).
+Not shown: 65521 closed tcp ports (reset)
+PORT      STATE SERVICE            VERSION
+80/tcp    open  http               Apache httpd 2.4.51 ((Win64) PHP/7.4.26)
+|_http-title: WAMPSERVER Homepage
+|_http-server-header: Apache/2.4.51 (Win64) PHP/7.4.26
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Windows Server 2012 R2 Standard 9600 microsoft-ds
+3307/tcp  open  opsession-prxy?
+| fingerprint-strings: 
+|   NULL:
+|_    Host 'ip-192-168-100-5.us-west-1.compute.internal' is not allowed to connect to this MariaDB server
+3389/tcp  open  ssl/ms-wbt-server?
+| rdp-ntlm-info: 
+|   Target_Name: WINSERVER-01
+|   NetBIOS_Domain_Name: WINSERVER-01
+|   NetBIOS_Computer_Name: WINSERVER-01
+|   DNS_Domain_Name: WINSERVER-01
+|   DNS_Computer_Name: WINSERVER-01
+|   Product_Version: 6.3.9600
+|_  System_Time: 2026-03-14T05:19:32+00:00
+| ssl-cert: Subject: commonName=WINSERVER-01
+| Not valid before: 2026-03-13T05:03:15
+|_Not valid after:  2026-09-12T05:03:15
+|_ssl-date: 2026-03-14T05:19:39+00:00; 0s from scanner time.
+5985/tcp  open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+47001/tcp open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+49169/tcp open  msrpc              Microsoft Windows RPC
+49170/tcp open  msrpc              Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3307-TCP:V=7.92%I=7%D=3/14%Time=69B4EF96%P=x86_64-pc-linux-gnu%r(NU
+SF:LL,6A,"f\0\0\x01\xffj\x04Host\x20'ip-192-168-100-5\.us-west-1\.compute\
+SF:.internal'\x20is\x20not\x20allowed\x20to\x20connect\x20to\x20this\x20Ma
+SF:riaDB\x20server");
+MAC Address: 02:10:13:6D:9B:83 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=3/14%OT=80%CT=1%CU=36251%PV=Y%DS=1%DC=D%G=Y%M=021013%T
+OS:M=69B4EFEC%P=x86_64-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=10C%TI=I%CI=I%II=I
+OS:%SS=S%TS=7)OPS(O1=M2301NW8ST11%O2=M2301NW8ST11%O3=M2301NW8NNT11%O4=M2301
+OS:NW8ST11%O5=M2301NW8ST11%O6=M2301ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000
+OS:%W5=2000%W6=2000)ECN(R=Y%DF=Y%T=80%W=2000%O=M2301NW8NNS%CC=Y%Q=)T1(R=Y%D
+OS:F=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0
+OS:%Q=)T3(R=Y%DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=
+OS:A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=
+OS:Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=A
+OS:R%O=%RD=0%Q=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%R
+OS:UD=G)IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 1 hop
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_nbstat: NetBIOS name: WINSERVER-01, NetBIOS user: <unknown>, NetBIOS MAC: 02:10:13:6d:9b:83 (unknown)
+| smb2-time: 
+|   date: 2026-03-14T05:19:33
+|_  start_date: 2026-03-14T05:03:11
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb-os-discovery: 
+|   OS: Windows Server 2012 R2 Standard 9600 (Windows Server 2012 R2 Standard 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_server_2012::-
+|   Computer name: WINSERVER-01
+|   NetBIOS computer name: WINSERVER-01\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2026-03-14T05:19:31+00:00
+| smb2-security-mode: 
+|   3.0.2: 
+|_    Message signing enabled but not required
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.67 ms ip-192-168-100-50.us-west-1.compute.internal (192.168.100.50)
+
+Nmap scan report for ip-192-168-100-51.us-west-1.compute.internal (192.168.100.51)
+Host is up (0.00086s latency).
+Not shown: 65521 closed tcp ports (reset)
+PORT      STATE SERVICE            VERSION
+21/tcp    open  ftp                Microsoft ftpd
+| ftp-syst: 
+|_  SYST: Windows_NT
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 04-19-22  02:25AM       <DIR>          aspnet_client
+| 04-19-22  01:19AM                 1400 cmdasp.aspx
+| 04-19-22  12:17AM                99710 iis-85.png
+| 04-19-22  12:17AM                  701 iisstart.htm
+|_04-19-22  02:13AM                   22 robots.txt.txt
+80/tcp    open  http               Microsoft IIS httpd 8.5
+|_http-svn-info: ERROR: Script execution failed (use -d to debug)
+|_http-server-header: Microsoft-IIS/8.5
+|_http-title: IIS Windows Server
+| http-methods: 
+|_  Potentially risky methods: TRACE COPY PROPFIND DELETE MOVE PROPPATCH MKCOL LOCK UNLOCK PUT
+| http-webdav-scan: 
+|   WebDAV type: Unknown
+|   Allowed Methods: OPTIONS, TRACE, GET, HEAD, POST, COPY, PROPFIND, DELETE, MOVE, PROPPATCH, MKCOL, LOCK, UNLOCK
+|   Server Date: Sat, 14 Mar 2026 05:19:31 GMT
+|   Public Options: OPTIONS, TRACE, GET, HEAD, POST, PROPFIND, PROPPATCH, MKCOL, PUT, DELETE, COPY, MOVE, LOCK, UNLOCK
+|   Server Type: Microsoft-IIS/8.5
+|   Directory Listing: 
+|     http://ip-192-168-100-51.us-west-1.compute.internal/
+|     http://ip-192-168-100-51.us-west-1.compute.internal/aspnet_client/
+|     http://ip-192-168-100-51.us-west-1.compute.internal/cmdasp.aspx
+|     http://ip-192-168-100-51.us-west-1.compute.internal/iis-85.png
+|     http://ip-192-168-100-51.us-west-1.compute.internal/iisstart.htm
+|_    http://ip-192-168-100-51.us-west-1.compute.internal/robots.txt.txt
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+3389/tcp  open  ssl/ms-wbt-server?
+|_ssl-date: 2026-03-14T05:19:39+00:00; 0s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: WINSERVER-02
+|   NetBIOS_Domain_Name: WINSERVER-02
+|   NetBIOS_Computer_Name: WINSERVER-02
+|   DNS_Domain_Name: WINSERVER-02
+|   DNS_Computer_Name: WINSERVER-02
+|   Product_Version: 6.3.9600
+|_  System_Time: 2026-03-14T05:19:34+00:00
+| ssl-cert: Subject: commonName=WINSERVER-02
+| Not valid before: 2026-03-13T05:03:08
+|_Not valid after:  2026-09-12T05:03:08
+5985/tcp  open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+47001/tcp open  http               Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+49169/tcp open  msrpc              Microsoft Windows RPC
+49170/tcp open  msrpc              Microsoft Windows RPC
+MAC Address: 02:97:0A:34:9B:B7 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=3/14%OT=21%CT=1%CU=33045%PV=Y%DS=1%DC=D%G=Y%M=02970A%T
+OS:M=69B4EFEC%P=x86_64-pc-linux-gnu)SEQ(SP=103%GCD=1%ISR=107%TI=I%CI=I%II=I
+OS:%SS=S%TS=7)OPS(O1=M2301NW8ST11%O2=M2301NW8ST11%O3=M2301NW8NNT11%O4=M2301
+OS:NW8ST11%O5=M2301NW8ST11%O6=M2301ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000
+OS:%W5=2000%W6=2000)ECN(R=Y%DF=Y%T=80%W=2000%O=M2301NW8NNS%CC=Y%Q=)T1(R=Y%D
+OS:F=Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0
+OS:%Q=)T3(R=Y%DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=
+OS:A%A=O%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=
+OS:Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=A
+OS:R%O=%RD=0%Q=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%R
+OS:UD=G)IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 1 hop
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3.0.2: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: WINSERVER-02, NetBIOS user: <unknown>, NetBIOS MAC: 02:97:0a:34:9b:b7 (unknown)
+| smb2-time: 
+|   date: 2026-03-14T05:19:31
+|_  start_date: 2026-03-14T05:03:04
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.86 ms ip-192-168-100-51.us-west-1.compute.internal (192.168.100.51)
+
+Nmap scan report for ip-192-168-100-52.us-west-1.compute.internal (192.168.100.52)
+Host is up (0.00057s latency).
+Not shown: 65527 closed tcp ports (reset)
+PORT     STATE SERVICE       VERSION
+21/tcp   open  ftp           vsftpd 3.0.3
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:192.168.100.5
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 1
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 65534    65534         318 Apr 18  2022 updates.txt
+22/tcp   open  ssh           OpenSSH 8.2p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 7e:8c:d0:74:8c:a4:b1:8e:67:3c:ac:d0:f6:ca:eb:63 (RSA)
+|   256 64:79:3a:46:57:9a:26:b0:a0:72:2d:02:c7:22:87:ac (ECDSA)
+|_  256 1a:0b:ce:10:fd:dc:d8:10:70:6c:19:de:8f:1d:66:15 (ED25519)
+25/tcp   open  smtp          OpenSMTPD
+| smtp-commands: 1c5ce6f62bfc Hello ip-192-168-100-52.us-west-1.compute.internal [192.168.100.5], pleased to meet you, 8BITMIME, ENHANCEDSTATUSCODES, SIZE 36700160, DSN, HELP
+|_ 2.0.0 This is OpenSMTPD 2.0.0 To report bugs in the implementation, please contact bugs@openbsd.org 2.0.0 with full details 2.0.0 End of HELP info
+80/tcp   open  http          Apache httpd 2.4.41
+|_http-title: Index of /
+| http-ls: Volume /
+| SIZE  TIME              FILENAME
+| -     2018-02-21 17:28  drupal/
+|_
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+139/tcp  open  netbios-ssn   Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn   Samba smbd 4.13.17-Ubuntu (workgroup: WORKGROUP)
+3306/tcp open  mysql         MySQL 5.5.5-10.3.34-MariaDB-0ubuntu0.20.04.1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.3.34-MariaDB-0ubuntu0.20.04.1
+|   Thread ID: 38
+|   Capabilities flags: 63486
+|   Some Capabilities: LongColumnFlag, ConnectWithDatabase, IgnoreSpaceBeforeParenthesis, SupportsCompression, SupportsTransactions, Speaks41ProtocolOld, IgnoreSigpipes, Speaks41ProtocolNew, FoundRows, Support41Auth, ODBCClient, SupportsLoadDataLocal, DontAllowDatabaseTableColumn, InteractiveClient, SupportsMultipleStatments, SupportsAuthPlugins, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: g.Jmc-Q3GN2LiN(zTpZP
+|_  Auth Plugin Name: mysql_native_password
+3389/tcp open  ms-wbt-server xrdp
+MAC Address: 02:11:66:0A:D9:A7 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=3/14%OT=21%CT=1%CU=41438%PV=Y%DS=1%DC=D%G=Y%M=021166%T
+OS:M=69B4EFEC%P=x86_64-pc-linux-gnu)SEQ(SP=100%GCD=1%ISR=109%TI=Z%CI=Z%II=I
+OS:%TS=A)OPS(O1=M2301ST11NW7%O2=M2301ST11NW7%O3=M2301NNT11NW7%O4=M2301ST11N
+OS:W7%O5=M2301ST11NW7%O6=M2301ST11)WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F
+OS:4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M2301NNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T
+OS:=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R
+OS:%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=
+OS:40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0
+OS:%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R
+OS:=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+Service Info: Hosts: 1c5ce6f62bfc, IP-192-168-100-52; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 1s, median: 0s
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+|_nbstat: NetBIOS name: IP-192-168-100-, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2026-03-14T05:19:33
+|_  start_date: N/A
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.13.17-Ubuntu)
+|   Computer name: ip-192-168-100-52
+|   NetBIOS computer name: IP-192-168-100-52\x00
+|   Domain name: us-west-1.compute.internal
+|   FQDN: ip-192-168-100-52.us-west-1.compute.internal
+|_  System time: 2026-03-14T05:19:33+00:00
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.57 ms ip-192-168-100-52.us-west-1.compute.internal (192.168.100.52)
+
+Nmap scan report for ip-192-168-100-55.us-west-1.compute.internal (192.168.100.55)
+Host is up (0.00036s latency).
+Not shown: 65520 closed tcp ports (reset)
+PORT      STATE SERVICE       VERSION
+80/tcp    open  http          Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-title: IIS Windows Server
+|_http-server-header: Microsoft-IIS/10.0
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds  Windows Server 2019 Datacenter 17763 microsoft-ds
+3389/tcp  open  ms-wbt-server Microsoft Terminal Services
+| ssl-cert: Subject: commonName=WINSERVER-03
+| Not valid before: 2026-03-13T05:02:53
+|_Not valid after:  2026-09-12T05:02:53
+|_ssl-date: 2026-03-14T05:25:03+00:00; 0s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: WINSERVER-03
+|   NetBIOS_Domain_Name: WINSERVER-03
+|   NetBIOS_Computer_Name: WINSERVER-03
+|   DNS_Domain_Name: WINSERVER-03
+|   DNS_Computer_Name: WINSERVER-03
+|   Product_Version: 10.0.17763
+|_  System_Time: 2026-03-14T05:24:58+00:00
+5985/tcp  open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+47001/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  msrpc         Microsoft Windows RPC
+49666/tcp open  msrpc         Microsoft Windows RPC
+49667/tcp open  msrpc         Microsoft Windows RPC
+49669/tcp open  msrpc         Microsoft Windows RPC
+49670/tcp open  msrpc         Microsoft Windows RPC
+49671/tcp open  msrpc         Microsoft Windows RPC
+49679/tcp open  msrpc         Microsoft Windows RPC
+MAC Address: 02:E5:1C:4D:9B:ED (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=3/14%OT=80%CT=1%CU=44425%PV=Y%DS=1%DC=D%G=Y%M=02E51C%T
+OS:M=69B4F12F%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10A%TI=I%CI=I%II=I
+OS:%SS=S%TS=U)OPS(O1=M2301NW8NNS%O2=M2301NW8NNS%O3=M2301NW8%O4=M2301NW8NNS%
+OS:O5=M2301NW8NNS%O6=M2301NNS)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W
+OS:6=FF70)ECN(R=Y%DF=Y%T=80%W=FFFF%O=M2301NW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S
+OS:=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y
+OS:%DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%
+OS:O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=8
+OS:0%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%
+OS:Q=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=
+OS:Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 1 hop
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_nbstat: NetBIOS name: WINSERVER-03, NetBIOS user: <unknown>, NetBIOS MAC: 02:e5:1c:4d:9b:ed (unknown)
+| smb2-security-mode: 
+|   3.1.1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2026-03-14T05:24:57
+|_  start_date: N/A
+| smb-os-discovery: 
+|   OS: Windows Server 2019 Datacenter 17763 (Windows Server 2019 Datacenter 6.3)
+|   Computer name: WINSERVER-03
+|   NetBIOS computer name: WINSERVER-03\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2026-03-14T05:24:58+00:00
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.37 ms ip-192-168-100-55.us-west-1.compute.internal (192.168.100.55)
+
+Nmap scan report for ip-192-168-100-63.us-west-1.compute.internal (192.168.100.63)
+Host is up (0.00027s latency).
+Not shown: 65534 filtered tcp ports (no-response)
+PORT     STATE SERVICE       VERSION
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: EC2AMAZ-IK4QFED
+|   NetBIOS_Domain_Name: EC2AMAZ-IK4QFED
+|   NetBIOS_Computer_Name: EC2AMAZ-IK4QFED
+|   DNS_Domain_Name: EC2AMAZ-IK4QFED
+|   DNS_Computer_Name: EC2AMAZ-IK4QFED
+|   Product_Version: 10.0.14393
+|_  System_Time: 2026-03-14T05:24:58+00:00
+| ssl-cert: Subject: commonName=EC2AMAZ-IK4QFED
+| Not valid before: 2026-03-13T05:02:29
+|_Not valid after:  2026-09-12T05:02:29
+|_ssl-date: 2026-03-14T05:25:03+00:00; 0s from scanner time.
+MAC Address: 02:4B:10:74:60:55 (Unknown)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): FreeBSD 6.X (85%)
+OS CPE: cpe:/o:freebsd:freebsd:6.2
+Aggressive OS guesses: FreeBSD 6.2-RELEASE (85%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.27 ms ip-192-168-100-63.us-west-1.compute.internal (192.168.100.63)
+
+Nmap scan report for ip-192-168-100-67.us-west-1.compute.internal (192.168.100.67)
+Host is up (0.00027s latency).
+Not shown: 65534 closed tcp ports (reset)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 4e:24:04:fb:5f:8a:76:37:0d:e9:10:8d:82:4c:75:24 (RSA)
+|   256 f3:03:c3:7a:ac:ff:ae:6a:3d:7a:b8:53:3c:80:6e:33 (ECDSA)
+|_  256 6c:ef:0c:c1:1f:7d:af:2d:67:41:80:7c:af:0d:07:9e (ED25519)
+MAC Address: 02:ED:65:C9:18:B7 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=3/14%OT=22%CT=1%CU=40076%PV=Y%DS=1%DC=D%G=Y%M=02ED65%T
+OS:M=69B4F12F%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=109%TI=Z%CI=Z%II=I
+OS:%TS=A)OPS(O1=M2301ST11NW6%O2=M2301ST11NW6%O3=M2301NNT11NW6%O4=M2301ST11N
+OS:W6%O5=M2301ST11NW6%O6=M2301ST11)WIN(W1=F4B3%W2=F4B3%W3=F4B3%W4=F4B3%W5=F
+OS:4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M2301NNSNW6%CC=Y%Q=)T1(R=Y%DF=Y%T
+OS:=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R
+OS:%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=
+OS:40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0
+OS:%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R
+OS:=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.27 ms ip-192-168-100-67.us-west-1.compute.internal (192.168.100.67)
+
+Nmap scan report for ip-192-168-100-5.us-west-1.compute.internal (192.168.100.5)
+Host is up (0.000013s latency).
+Not shown: 65531 closed tcp ports (reset)
+PORT      STATE SERVICE       VERSION
+22/tcp    open  ssh           OpenSSH 8.7p1 Debian 2 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 02:79:f5:0d:bb:52:04:af:b1:4f:60:d9:16:39:83:e6 (RSA)
+|   256 79:69:46:3e:f6:a3:3c:c3:4d:cf:e3:63:a8:19:6d:6f (ECDSA)
+|_  256 76:c2:9f:94:0a:b6:10:f6:2f:6d:65:d8:b5:82:1d:fd (ED25519)
+3389/tcp  open  ms-wbt-server xrdp
+5910/tcp  open  vnc           VNC (protocol 3.8)
+| vnc-info: 
+|   Protocol version: 3.8
+|   Security types: 
+|     VeNCrypt (19)
+|     VNC Authentication (2)
+|   VeNCrypt auth subtypes: 
+|     VNC auth, Anonymous TLS (258)
+|_    Unknown security type (2)
+45656/tcp open  http          Werkzeug httpd 2.0.2 (Python 3.9.8)
+|_http-title: 404 Not Found
+|_http-server-header: Werkzeug/2.0.2 Python/3.9.8
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6.32
+OS details: Linux 2.6.32
+Network Distance: 0 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Post-scan script results:
+| clock-skew: 
+|   0s: 
+|     192.168.100.50 (ip-192-168-100-50.us-west-1.compute.internal)
+|     192.168.100.52 (ip-192-168-100-52.us-west-1.compute.internal)
+|     192.168.100.63 (ip-192-168-100-63.us-west-1.compute.internal)
+|_    192.168.100.55 (ip-192-168-100-55.us-west-1.compute.internal)
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 14 10:55:26 2026 -- 256 IP addresses (8 hosts up) scanned in 486.99 seconds
